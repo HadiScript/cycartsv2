@@ -1,0 +1,7 @@
+.imageIcon{
+  font-size: 150px !important;
+  color: red !important;
+}
+.imageIcon:hover {
+  color: purple !important;
+}

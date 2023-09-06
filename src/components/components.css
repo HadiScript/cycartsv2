@@ -1,0 +1,13 @@
+.secBtn {
+  background-color: #121937;
+  color: white;
+}
+
+.secBtn:hover {
+  background: linear-gradient(
+    180deg,
+    rgb(36, 215.58, 255) 0%,
+    rgb(27, 117, 187) 100%
+  );
+  color: black;
+}
