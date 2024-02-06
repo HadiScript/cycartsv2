@@ -48,33 +48,40 @@ const Services = () => {
           <div className="lg:pr-4">
             <div className="lg:max-w-lg">
               <h1 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                Provided Services
+                Cycarts Providing Providing Services Services
               </h1>
             </div>
           </div>
         </div>
         <div className="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
-          <img
-            className="w-[48rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]"
-            // src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
-            src={img2}
-            alt=""
-          />
+          <Fade bottom cascade>
+            <img
+              className="w-[48rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]"
+              src={
+                whichService === "App development"
+                  ? img1
+                  : whichService === "Web Development"
+                  ? img2
+                  : whichService === "E commerce Store"
+                  ? img3
+                  : whichService === "Blockchain Development"
+                  ? img4
+                  : img1
+              }
+              alt=""
+            />
+          </Fade>
         </div>
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
             <div className="max-w-xl text-base leading-7 text-dimWhite lg:max-w-lg">
-              <p>
-                Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget
-                risus enim. Mattis mauris semper sed amet vitae sed turpis id.
-                Id dolor praesent donec est. Odio penatibus risus viverra tellus
-                varius sit neque erat velit. Faucibus commodo massa rhoncus,
-                volutpat. Dignissim sed eget risus enim. Mattis mauris semper
-                sed amet vitae sed turpis id.
-              </p>
               <ul role="list" className="mt-8 space-y-8 text-gray-600">
                 {services.map((x, index) => (
-                  <li key={index} className="flex gap-x-3 cursor-pointer">
+                  <li
+                    key={index}
+                    onClick={() => setWhichService(x.title)}
+                    className="flex gap-x-3 cursor-pointer"
+                  >
                     {x.icon}
                     <span>
                       <strong className="font-semibold text-white">
@@ -86,13 +93,6 @@ const Services = () => {
                   </li>
                 ))}
               </ul>
-              <p className="mt-8">
-                Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis
-                odio id et. Id blandit molestie auctor fermentum dignissim.
-                Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate
-                et ultrices hac adipiscing egestas. Iaculis convallis ac tempor
-                et ut. Ac lorem vel integer orci.
-              </p>
             </div>
           </div>
         </div>
